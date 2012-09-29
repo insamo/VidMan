@@ -2,14 +2,21 @@
 #define SERVER_H
 
 #include <QObject>
+#include <QTcpServer>
+#include "src/clientserver/clientthread.h"
 
-class server : public QObject
+class TCPServer : public QTcpServer
 {
     Q_OBJECT
 public:
-    explicit server(QObject *parent = 0);
+    explicit TCPServer(QObject *parent = 0);
+
+private:
+    QString ip;
+    quint16 port;
     
-signals:
+protected:
+    void incomingConnection(int handle);
     
 public slots:
     

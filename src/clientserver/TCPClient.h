@@ -2,16 +2,21 @@
 #define CLIENT_H
 
 #include <QObject>
+#include <QTcpSocket>
+#include "src/lib/reporting.h"
 
-class client : public QObject
+class TCPClient : public QObject
 {
     Q_OBJECT
 public:
-    explicit client(QObject *parent = 0);
+    explicit TCPClient(QObject *parent = 0);
     
 signals:
     
 public slots:
+
+private:
+    QTcpSocket *tcpSocket;
     
 };
 
