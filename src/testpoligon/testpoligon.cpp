@@ -6,6 +6,7 @@ TestPoligon::TestPoligon(QWidget *parent) :
     ui(new Ui::TestPoligon)
 {
     ui->setupUi(this);
+    PLSorter sorter;
 }
 
 TestPoligon::~TestPoligon()

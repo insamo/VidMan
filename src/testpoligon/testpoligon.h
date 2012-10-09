@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+#include "src/lib/plsorter.h"
+
 namespace Ui {
 class TestPoligon;
 }
